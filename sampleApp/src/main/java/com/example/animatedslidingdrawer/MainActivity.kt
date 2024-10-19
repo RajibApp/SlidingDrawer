@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(HomeFragment())
 
-        // Initialize SlidingRootNav
+        // Initialize
         animatedSlidingDrawer = AnimatedSlidingDrawerBuilder(this)
             .withMenuOpened(false)  // Initial state of the menu
             .withContentClickableWhenMenuOpened(true)

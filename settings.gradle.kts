@@ -24,5 +24,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AnimatedSlidingDrawer"
-include(":app")
-include(":AnimatedSlidingDrawerLibrary")
+include(":sampleApp")
+//include(":AnimatedSlidingDrawerLibrary")
