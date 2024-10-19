@@ -4,18 +4,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.animatedslidingdrawer.databinding.ActivityMainBinding
 import com.example.animatedslidingdrawer.databinding.DrawerLayoutBinding
 import com.example.animatedslidingdrawer.fragment.HomeFragment
 import com.example.animatedslidingdrawer.fragment.TrendingFragment
 import com.example.animatedslidingdrawerlibrary.AnimatedSlidingDrawer
+import com.example.animatedslidingdrawerlibrary.AnimatedSlidingDrawerBuilder
 import com.example.animatedslidingdrawerlibrary.DrawerSlideGravity
-import com.example.animatedslidingdrawerlibrary.SlidingRootNavBuilder
 import com.example.animatedslidingdrawerlibrary.callback.DrawerDragListener
 import com.example.animatedslidingdrawerlibrary.transform.CustomRootTransformation
 
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(HomeFragment())
 
         // Initialize SlidingRootNav
-        animatedSlidingDrawer = SlidingRootNavBuilder(this)
+        animatedSlidingDrawer = AnimatedSlidingDrawerBuilder(this)
             .withMenuOpened(false)  // Initial state of the menu
             .withContentClickableWhenMenuOpened(true)
             .withSavedState(savedInstanceState)

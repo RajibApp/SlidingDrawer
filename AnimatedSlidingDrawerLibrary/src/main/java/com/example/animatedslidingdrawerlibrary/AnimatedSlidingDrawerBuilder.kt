@@ -23,7 +23,7 @@ import com.example.animatedslidingdrawerlibrary.util.HiddenMenuClickConsumer
 import java.util.Arrays
 
 
-class AnimatedSlidingDrawerBuilderBuilder(private val activity: Activity) {
+class AnimatedSlidingDrawerBuilder(private val activity: Activity) {
     private var contentView: ViewGroup? = null
 
     private var menuView: View? = null
@@ -57,56 +57,56 @@ class AnimatedSlidingDrawerBuilderBuilder(private val activity: Activity) {
         this.isContentClickableWhenMenuOpened = true
     }
 
-    fun withMenuView(view: View?): SlidingRootNavBuilder {
+    fun withMenuView(view: View?): AnimatedSlidingDrawerBuilder {
         menuView = view
         return this
     }
 
-    fun withMenuLayout(@LayoutRes layout: Int): SlidingRootNavBuilder {
+    fun withMenuLayout(@LayoutRes layout: Int): AnimatedSlidingDrawerBuilder {
         menuLayoutRes = layout
         return this
     }
 
-    fun withToolbarMenuToggle(tb: Toolbar?): SlidingRootNavBuilder {
+    fun withToolbarMenuToggle(tb: Toolbar?): AnimatedSlidingDrawerBuilder {
         toolbar = tb
         return this
     }
 
-    fun withGravity(g: DrawerSlideGravity): SlidingRootNavBuilder {
+    fun withGravity(g: DrawerSlideGravity): AnimatedSlidingDrawerBuilder {
         gravity = g
         return this
     }
 
-    fun withContentView(cv: ViewGroup?): SlidingRootNavBuilder {
+    fun withContentView(cv: ViewGroup?): AnimatedSlidingDrawerBuilder {
         contentView = cv
         return this
     }
 
-    fun withMenuLocked(locked: Boolean): SlidingRootNavBuilder {
+    fun withMenuLocked(locked: Boolean): AnimatedSlidingDrawerBuilder {
         isMenuLocked = locked
         return this
     }
 
-    fun withSavedState(state: Bundle?): SlidingRootNavBuilder {
+    fun withSavedState(state: Bundle?): AnimatedSlidingDrawerBuilder {
         savedState = state
         return this
     }
 
-    fun withMenuOpened(opened: Boolean): SlidingRootNavBuilder {
+    fun withMenuOpened(opened: Boolean): AnimatedSlidingDrawerBuilder {
         isMenuOpened = opened
         return this
     }
 
-    fun withContentClickableWhenMenuOpened(clickable: Boolean): SlidingRootNavBuilder {
+    fun withContentClickableWhenMenuOpened(clickable: Boolean): AnimatedSlidingDrawerBuilder {
         isContentClickableWhenMenuOpened = clickable
         return this
     }
 
-    fun withDragDistance(dp: Int): SlidingRootNavBuilder {
+    fun withDragDistance(dp: Int): AnimatedSlidingDrawerBuilder {
         return withDragDistancePx(dpToPx(dp))
     }
 
-    fun withDragDistancePx(px: Int): SlidingRootNavBuilder {
+    fun withDragDistancePx(px: Int): AnimatedSlidingDrawerBuilder {
         dragDistance = px
         return this
     }
@@ -126,26 +126,26 @@ class AnimatedSlidingDrawerBuilderBuilder(private val activity: Activity) {
     }
 
 
-    fun withRootViewYTranslation(translation: Int): SlidingRootNavBuilder {
+    fun withRootViewYTranslation(translation: Int): AnimatedSlidingDrawerBuilder {
         return withRootViewYTranslationPx(dpToPx(translation))
     }
 
-    fun withRootViewYTranslationPx(translation: Int): SlidingRootNavBuilder {
+    fun withRootViewYTranslationPx(translation: Int): AnimatedSlidingDrawerBuilder {
         transformations.add(YTranslationTransformation(translation.toFloat()))
         return this
     }
 
-    fun addRootTransformation(transformation: RootTransformation): SlidingRootNavBuilder {
+    fun addRootTransformation(transformation: RootTransformation): AnimatedSlidingDrawerBuilder {
         transformations.add(transformation)
         return this
     }
 
-    fun addDragListener(dragListener: DrawerDragListener): SlidingRootNavBuilder {
+    fun addDragListener(dragListener: DrawerDragListener): AnimatedSlidingDrawerBuilder {
         dragListeners.add(dragListener)
         return this
     }
 
-    fun addDragStateListener(dragStateListener: DrawerDragStateListener): SlidingRootNavBuilder {
+    fun addDragStateListener(dragStateListener: DrawerDragStateListener): AnimatedSlidingDrawerBuilder {
         dragStateListeners.add(dragStateListener)
         return this
     }
