@@ -25,4 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AnimatedSlidingDrawer"
 include(":app")
-//include(":AnimatedSlidingDrawerLibrary")
+include(":AnimatedSlidingDrawerLibrary")
