@@ -23,7 +23,7 @@ import com.example.animatedslidingdrawerlibrary.util.HiddenMenuClickConsumer
 import java.util.Arrays
 
 
-class SlidingRootNavBuilder(private val activity: Activity) {
+class AnimatedSlidingDrawerBuilderBuilder(private val activity: Activity) {
     private var contentView: ViewGroup? = null
 
     private var menuView: View? = null
